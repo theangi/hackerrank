@@ -1,8 +1,7 @@
 #!/bin/python3
 
-import sys
 
-def plusMinus(arr):
+def plus_minus(arr):
     positive, negative, zeros = 0, 0, 0
     for x in arr:
         if x > 0:
@@ -16,4 +15,4 @@ def plusMinus(arr):
 if __name__ == "__main__":
     n = int(input().strip())
     arr = list(map(int, input().strip().split(' ')))
-    plusMinus(arr)
+    plus_minus(arr)
