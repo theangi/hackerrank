@@ -10,13 +10,14 @@ def remove_double_characters(string):
         return string
 
     ris = ''
-    for i in range(len(string)):
+    for i, _ in enumerate(string):
         if i in [index_to_ignore, index_to_ignore + 1]:
             continue
         ris += string[i]
 
     print('Input was {} --> {}'.format(string, ris))
     return ris
+
 
 def super_reduced_string(string):
     string_rip = remove_double_characters(string)

@@ -13,7 +13,7 @@ def improved(money, flavors):
 # 1.0258732159854844
 def icecreamParlor(money, flavors):
     for i, _ in enumerate(flavors):
-        for j in range(len(flavors)):
+        for j, _ in enumerate(flavors):
             if i != j and flavors[i] + flavors[j] == money:
                 return [i + 1, j + 1]
 
