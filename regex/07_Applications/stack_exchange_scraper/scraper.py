@@ -1,6 +1,6 @@
 
 def main(input_string):
-    import re, sys
+    import re
     # input_string = sys.stdin.read()
     regex = r'question-summary-(\d+)\">.*?question-hyperlink\">([\w\s]+).*?class=\"relativetime\">([\w\s]+)<'
     for x in re.findall(regex, input_string, re.DOTALL):

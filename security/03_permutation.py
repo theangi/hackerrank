@@ -1,5 +1,5 @@
 def print_permutation():
-    n = input()
+    _ = input()
     values = list(map(int, input().split()))
 
     for i, x in enumerate(values):

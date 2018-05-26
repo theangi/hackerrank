@@ -9,7 +9,7 @@ def decrypt_adaptively():
 
     dictionary = []
     with open('/home/matteo/ALL/hackerrank/security/dictionary.lst') as f:
-        [dictionary.append(x.replace('\n', '')) for x in f]
+        _ = [dictionary.append(x.replace('\n', '')) for x in f]
 
     row_input = 'lhpohes gvjhe ztytwojmmtel lgsfcgver segpsltjyl vftstelc djfl rml catrroel jscvjqjyfo mjlesl lcjmmfqe egvj gsfyhtyq sjfgver csfaotyq lfxtyq gjywplesl lxljm dxcel mpyctyq ztytwojmmtelel mfcgv spres mjm psgvty bfml ofle mjlc dtc tygfycfctjy dfsyl zpygvel csfao yealqsjpml atyl lgsjql qyfsotelc fseyf ojllel gjzmselltyq wpyhtelc zpltgl weygel afyher rstnesl aefleo rtyhes mvflel yphe rstnes qojder dtwwer lojml mfcgvel reocfl djzder djpygtyq gstmmoeafsel reg cpdel qspyqe mflctel csflvtyq vfcl avfghtyq vftsdfool mzer rsjye wjjol psol mplvtyq catrroe mvfqe lgseey leqzeycer wjseqsjpyrer lmjtoes msjwtoel docl djpyger cjpstlcl goefy gojddesl mjrl qjddoe gjy gpdtyql lyftotyq rjayojfr swgl vjle atrqec gjzmfgces frfl qotcgver gspzd zftodjzdl lyfsh'
 
@@ -31,7 +31,7 @@ def decrypt_adaptively():
         return [x for x in dictionary if len(x) == len(value) and check_same_letter_everywhere(value, x)]
 
     def update_mapping(cryped, decrypted):
-        for i, x in enumerate(cryped):
+        for i, _ in enumerate(cryped):
             if correspondances[cryped[i]] == 0:
                 correspondances[cryped[i]] = decrypted[i]
 
@@ -39,7 +39,7 @@ def decrypt_adaptively():
         return [pos for pos, char in enumerate(word) if char == letter]
 
     def matches_using_current_data(first, second):
-        for i in range(len(first)):
+        for i, _ in enumerate(first):
             if correspondances[first[i]] != 0 and correspondances[first[i]] != second[i]:
                 return False
         return True

@@ -5,14 +5,14 @@ def improved(money, flavors):
     import collections
     counter = collections.Counter(flavors)
 
-    for i in range(len(flavors)):
+    for i, _ in enumerate(flavors):
         if counter[money - flavors[i]]:
             # nope! [1 2 . . 2 . 1 ] # Counter does not store original position :(
             return [i + 1, counter + 1]
 
 # 1.0258732159854844
 def icecreamParlor(money, flavors):
-    for i in range(len(flavors)):
+    for i, _ in enumerate(flavors):
         for j in range(len(flavors)):
             if i != j and flavors[i] + flavors[j] == money:
                 return [i + 1, j + 1]
