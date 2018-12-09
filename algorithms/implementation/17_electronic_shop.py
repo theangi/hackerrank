@@ -15,6 +15,10 @@ def get_money_spent(keyboards, drives, budget):
     return max_spent if max_spent else -1
 
 
+def get_money_spent2(keyboards, drivers, budget):
+    from itertools import product
+    return max((k + d if k + d <= budget else -1 for k, d in product(keyboards, drivers)))
+
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
