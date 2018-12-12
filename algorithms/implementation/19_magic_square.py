@@ -21,7 +21,7 @@ pre_calculated_matrix = [
 # 8 1 5
 # so just calculate how much is required to make
 # [4, 9, 2] --> [8, 1, 6], then [6, 1, 8], ...
-# the "cost" is sum([4, 9, 2] - sum([x]), in absolute values
+# the "cost" is |4 - 8| + |9 - 1| + |2 - 6| and so on
 def forming_magic_square(input_matrix):
     totals = []
     for magic in pre_calculated_matrix:
